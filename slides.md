@@ -25,57 +25,31 @@ css: unocss
 
 # Nextチュートリアルで覚えるNuxt3
 
-<div class="flex justify-center items-center"><img width="24" height="24" src="https://pbs.twimg.com/profile_images/1587289049848745986/zb3TbVvf_400x400.jpg" /><p class="ml-1 text-gray-400">ushironoko</p></div>
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+<div class="flex justify-center items-center"><p class="ml-1 text-gray-400">ushironoko</p></div>
 
 <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
 </div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 
-# What is Slidev?
+# 自己紹介
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+<img class="rounded-full border border-1" width="120" height="120" src="https://pbs.twimg.com/profile_images/1587289049848745986/zb3TbVvf_400x400.jpg" />
 
 <br>
-<br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+- 📝 **name** - ushironoko
+- <carbon-logo-github /> **GitHub** - ushironoko
+- <carbon-logo-twitter /> **Twitter** - @ushiro_noko
+- 🖋️ **Blog** - ushironoko.me
+- 🛠️ **Works** - STORES, inc. & NuxtLabs Japan by ZEN Advisor
 
 <style>
 h1 {
-  background-color: #2B90B6;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -83,36 +57,425 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
+---
+
+# 目次
+
+- Nextチュートリアルとは
+- Nuxt3とは
+- 本日のゴール
+- 実践
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 
-# Navigation
+# Nextチュートリアルとは
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+### Next.js Learn
 
-### Keyboard Shortcuts
+https://nextjs.org/learn/basics/create-nextjs-app
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+- Next.js公式のチュートリアル
+- Next.jsのさまざまな基本機能を一通り触りながら覚えられる
+- 最終的にVercelへ自作のmarkdownベースブログをデプロイできる
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<img class="absolute top-20 right-10" width="300" src="https://i.gyazo.com/61250d9085160648624d1777f97a5e3c.png" />
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+
+# Nuxt3とは
+
+https://nuxt.com/
+
+- Nuxt.jsの最新版
+- Vueのフル機能をサポート
+- ファイルベースルーティング、ページ毎のCSR/SSR/SSG/ISR(G)
+- Vite or Webpack5
+- esbuild transpiling
+- Zero-Config TypeScript Support
+- Node.js/Deno/Edge Functions/Workerなどさまざまな環境で動作する
+- auto-imports,特定ディレクトリ配下のd.tsの自動生成
+- やっと出た(betaから1年)
+
+<img class="absolute top-20 right-10" width="300" src="https://i.gyazo.com/1e0f92dba3bf0ae3e309b07722775184.png" />
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# 本日のゴール
+
+https://nuxt.com/
+
+- Nextチュートリアルを実践形式でNuxtに置き換えながら見せます
+- Vercel…ではなくCloudflare Pagesへデプロイ(推しなので)
+- 時間の都合で一部簡略化します
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+layout: center
+class: text-center
+---
+
+<p class="text-[150px]">実演</p>
+
+---
+
+# プロジェクト生成&インストール
+
+1. `nuxi` コマンドでスキャフォールド。
+
+```shell
+npx nuxi init pwa-night-ushironoko-demo
+```
+
+2. 移動
+
+```shell
+cd pwa-night-ushironoko-demo
+```
+
+3. 依存のインストール
+
+```shell
+yarn install
+```
+
+4. サーバー起動
+
+```shell
+yarn dev
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# 構成の確認
+
+- `.nuxt`: 自動生成した型や、サーバーの起動に必要な情報などが格納される
+- `app.vue`: エントリーポイントとなるコンポーネント
+- `nuxt.config.ts`: Nuxtの設定を記述するファイル
+- `tsconfig.json`: `.nuxt` 配下の `tsconfig.json` をextendしている
+
+## ポイント
+- `.nuxt` 配下の型情報を用いてauto importsの型を効かせる
+- `.nuxt` を再生成するときは `yarn postinstall`
+
+<img class="absolute top-5 right-10" width="260" src="https://i.gyazo.com/0abf7375639c8b48da84bee71bd3fad2.png" />
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# pages/index.vueを作る
+
+1. `app.vue` を消す
+2. `pages/index.vue` を作る
+
+pages/index.vue
+```vue
+<template>
+  <h1>First post</h1>
+</template>
+```
+
+<br>
+
+### ポイント
+- `app.vue` か `pages/index.vue` をエントリーポイントにする
+  - 単一のページ(LPなど)は `app.vue`、そうでない場合は `pages/index.vue`
+  - `app.vue` を使うとバンドルから `vue-router` が除外される
+
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# pages/posts/first_post.vueを作る
+
+1. `pages/posts/first_post.vue` を作る
+2. `pages/index.vue` を編集する
+
+pages/posts/first_post.vue
+
+```vue
+<template>
+  <h1>First post</h1>
+  <h2><NuxtLink href="/">Back to home</NuxtLink></h2>
+</template>
+```
+
+pages/index.vue
+
+```vue
+<template>
+  <h1>
+    Read <NuxtLink href="/posts/first-post">this page!</NuxtLink>
+  </h1>
+</template>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,cssをセットする
+
+1. `public` ディレクトリを作って `public/images/profile.jpg` を置く
+2. `components/ProfileImage.vue` を作る
+3. `pages/posts/first_post.vue` のtitleを修正する
+
+components/ProfileImage.vue
+
+```vue
+<template>
+  <img src="/images/profile.jpg" height="144" width="144" alt="ushironoko" />
+</template>
+```
+
+pages/posts/first_post.vue
+
+```vue
+<template>
+  <Head>
+    <title>First Post</title>
+  </Head>
+  <h1>First post</h1>
+  <h2><NuxtLink href="/">Back to home</NuxtLink></h2>
+</template>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,cssをセットする
+
+4. サードパーティJSを読み込む(あとで消す)
+
+pages/posts/first_post.vue
+
+```vue
+<script setup lang="ts">
+const handleOnLoad = () => console.log(`script loaded correctly, window.FB has been populated`)
+useHead({
+  script: [
+    { src: 'https://connect.facebook.net/en_US/sdk.js', defer: true, onload: handleOnLoad }
+  ]
+})
+</script>
+
+<template>
+  <Head>
+    <title>First Post</title>
+  </Head>
+
+  <h1>First post</h1>
+  <h2><NuxtLink href="/">Back to home</NuxtLink></h2>
+</template>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,cssをセットする
+
+5. `layouts/default.vue` を作る
+
+layouts/default.vue
+
+```vue
+<template>
+  <div class="container">
+    <slot /> 
+  </div>
+</template>
+
+<style scoped>
+.container {
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+</style>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,cssをセットする
+
+6. `assets/styles/global.css` を作る
+
+assets/styles/global.css
+
+```css
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,cssをセットする
+
+7. `assets/styles/global.css` を登録する
+
+nuxt.config.ts
+
+```ts
+export default defineNuxtConfig({
+  css: ['~/assets/styles/global.css']
+})
+```
+
+<br>
+
+### ポイント
+- `layouts/default.vue` がデフォルトで全てのページに適用される
+  - 別途指定する場合は `definePageMeta` で指定する
+- グローバルcssは `nuxt.config.ts` で登録する
+  - layoutsでscoped styleを使っている場合そのレイアウト以外では適用されないため
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
 ---
 
 # Code
