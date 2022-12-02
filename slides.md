@@ -5,7 +5,7 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
 # apply any windi css classes to the current slide
-class: 'text-center'
+class: "text-center"
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
@@ -23,7 +23,7 @@ drawings:
 css: unocss
 ---
 
-# Nextチュートリアルで覚えるNuxt3
+# Next チュートリアルで覚える Nuxt3
 
 <div class="flex justify-center items-center"><p class="ml-1 text-gray-400">ushironoko</p></div>
 
@@ -61,8 +61,8 @@ h1 {
 
 # 目次
 
-- Nextチュートリアルとは
-- Nuxt3とは
+- Next チュートリアルとは
+- Nuxt3 とは
 - 本日のゴール
 - 実践
 
@@ -78,15 +78,15 @@ h1 {
 
 ---
 
-# Nextチュートリアルとは
+# Next チュートリアルとは
 
 ### Next.js Learn
 
 https://nextjs.org/learn/basics/create-nextjs-app
 
-- Next.js公式のチュートリアル
-- Next.jsのさまざまな基本機能を一通り触りながら覚えられる
-- 最終的にVercelへ自作のmarkdownベースブログをデプロイできる
+- Next.js 公式のチュートリアル
+- Next.js のさまざまな基本機能を一通り触りながら覚えられる
+- 最終的に Vercel へ自作の markdown ベースブログをデプロイできる
 
 <img class="absolute top-20 right-10" width="300" src="https://i.gyazo.com/61250d9085160648624d1777f97a5e3c.png" />
 
@@ -102,19 +102,19 @@ h1 {
 
 ---
 
-# Nuxt3とは
+# Nuxt3 とは
 
 https://nuxt.com/
 
-- Nuxt.jsの最新版
-- Vueのフル機能をサポート
-- ファイルベースルーティング、ページ毎のCSR/SSR/SSG/ISR(G)
+- Nuxt.js の最新版
+- Vue のフル機能をサポート
+- ファイルベースルーティング、ページ毎の CSR/SSR/SSG/ISR(G)
 - Vite or Webpack5
 - esbuild transpiling
 - Zero-Config TypeScript Support
-- Node.js/Deno/Edge Functions/Workerなどさまざまな環境で動作する
-- auto-imports,特定ディレクトリ配下のd.tsの自動生成
-- やっと出た(betaから1年)
+- Node.js/Deno/Edge Functions/Worker などさまざまな環境で動作する
+- auto-imports,特定ディレクトリ配下の d.ts の自動生成
+- やっと出た(beta から 1 年)
 
 <img class="absolute top-20 right-10" width="300" src="https://i.gyazo.com/1e0f92dba3bf0ae3e309b07722775184.png" />
 
@@ -134,8 +134,8 @@ h1 {
 
 https://nuxt.com/
 
-- Nextチュートリアルを実践形式でNuxtに置き換えながら見せます
-- Vercel…ではなくCloudflare Pagesへデプロイ(推しなので)
+- Next チュートリアルを実践形式で Nuxt に置き換えながら見せます
+- Vercel…ではなく Cloudflare Pages へデプロイ(推しなので)
 - 時間の都合で一部簡略化します
 
 <style>
@@ -149,11 +149,11 @@ h1 {
 </style>
 
 ---
-layout: center
-class: text-center
----
 
-<p class="text-[150px]">実演</p>
+<p class="text-[100px] absolute top-20 left-94">実演</p>
+
+<p class="text-[16px] absolute top-44 left-97">コードはコピペできます</p>
+<img class="absolute bottom-4 left-60" src="https://i.gyazo.com/d7296f933a58946da37d4635955ab702.png" width="500" />
 
 ---
 
@@ -199,11 +199,12 @@ h1 {
 
 - `.nuxt`: 自動生成した型や、サーバーの起動に必要な情報などが格納される
 - `app.vue`: エントリーポイントとなるコンポーネント
-- `nuxt.config.ts`: Nuxtの設定を記述するファイル
-- `tsconfig.json`: `.nuxt` 配下の `tsconfig.json` をextendしている
+- `nuxt.config.ts`: Nuxt の設定を記述するファイル
+- `tsconfig.json`: `.nuxt` 配下の `tsconfig.json` を extend している
 
 ## ポイント
-- `.nuxt` 配下の型情報を用いてauto importsの型を効かせる
+
+- `.nuxt` 配下の型情報を用いて auto imports の型を効かせる
 - `.nuxt` を再生成するときは `yarn postinstall`
 
 <img class="absolute top-5 right-10" width="260" src="https://i.gyazo.com/0abf7375639c8b48da84bee71bd3fad2.png" />
@@ -220,12 +221,13 @@ h1 {
 
 ---
 
-# pages/index.vueを作る
+# pages/index.vue を作る
 
 1. `app.vue` を消す
 2. `pages/index.vue` を作る
 
 pages/index.vue
+
 ```vue
 <template>
   <h1>First post</h1>
@@ -235,10 +237,10 @@ pages/index.vue
 <br>
 
 ### ポイント
-- `app.vue` か `pages/index.vue` をエントリーポイントにする
-  - 単一のページ(LPなど)は `app.vue`、そうでない場合は `pages/index.vue`
-  - `app.vue` を使うとバンドルから `vue-router` が除外される
 
+- `app.vue` か `pages/index.vue` をエントリーポイントにする
+  - 単一のページ(LP など)は `app.vue`、そうでない場合は `pages/index.vue`
+  - `app.vue` を使うとバンドルから `vue-router` が除外される
 
 <style>
 h1 {
@@ -252,7 +254,7 @@ h1 {
 
 ---
 
-# pages/posts/first_post.vueを作る
+# pages/posts/first_post.vue を作る
 
 1. `pages/posts/first_post.vue` を作る
 2. `pages/index.vue` を編集する
@@ -270,9 +272,7 @@ pages/index.vue
 
 ```vue
 <template>
-  <h1>
-    Read <NuxtLink href="/posts/first-post">this page!</NuxtLink>
-  </h1>
+  <h1>Read <NuxtLink href="/posts/first-post">this page!</NuxtLink></h1>
 </template>
 ```
 
@@ -288,11 +288,11 @@ h1 {
 
 ---
 
-# assets,meta,cssをセットする
+# assets,meta,css をセットする
 
 1. `public` ディレクトリを作って `public/images/profile.jpg` を置く
 2. `components/ProfileImage.vue` を作る
-3. `pages/posts/first_post.vue` のtitleを修正する
+3. `pages/posts/first_post.vue` の title を修正する
 
 components/ProfileImage.vue
 
@@ -326,20 +326,51 @@ h1 {
 
 ---
 
-# assets,meta,cssをセットする
+# assets,meta,css をセットする
 
-4. サードパーティJSを読み込む(あとで消す)
+1. `public` ディレクトリを作って `public/images/profile.jpg` を置く
+2. `components/ProfileImage.vue` を作る
+3. `pages/posts/first_post.vue` の title を修正する
+
+<br>
+
+### ポイント
+
+- Image Optimize したい場合は https://v1.image.nuxtjs.org/ で(今回は時間都合で省略)
+
+<img class="absolute top-74 left-14" width="430" src="https://i.gyazo.com/2af86ff2c5c64821616d4e61f787be66.png" />
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,css をセットする
+
+4. サードパーティ JS を読み込む(時間がないのでスキップ！)
 
 pages/posts/first_post.vue
 
 ```vue
 <script setup lang="ts">
-const handleOnLoad = () => console.log(`script loaded correctly, window.FB has been populated`)
+const handleOnLoad = () =>
+  console.log(`script loaded correctly, window.FB has been populated`);
 useHead({
   script: [
-    { src: 'https://connect.facebook.net/en_US/sdk.js', defer: true, onload: handleOnLoad }
-  ]
-})
+    {
+      src: "https://connect.facebook.net/en_US/sdk.js",
+      defer: true,
+      onload: handleOnLoad,
+    },
+  ],
+});
 </script>
 
 <template>
@@ -364,24 +395,37 @@ h1 {
 
 ---
 
-# assets,meta,cssをセットする
+# assets,meta,css をセットする
 
-5. `layouts/default.vue` を作る
+5. `sass` をインストールする
+6. `layouts/default.vue` を作る
+
+```shell
+yarn add -D sass
+```
 
 layouts/default.vue
 
 ```vue
 <template>
   <div class="container">
-    <slot /> 
+    <slot />
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   max-width: 36rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backToHome {
+  margin: 3rem 0 0;
 }
 </style>
 ```
@@ -398,13 +442,13 @@ h1 {
 
 ---
 
-# assets,meta,cssをセットする
+# assets,meta,css をセットする
 
-6. `assets/styles/global.css` を作る
+7. `assets/styles/global.scss` を作る
 
-assets/styles/global.css
+assets/styles/global.scss
 
-```css
+```scss
 html,
 body {
   padding: 0;
@@ -432,6 +476,10 @@ img {
   max-width: 100%;
   display: block;
 }
+
+p {
+  margin: 0;
+}
 ```
 
 <style>
@@ -446,25 +494,26 @@ h1 {
 
 ---
 
-# assets,meta,cssをセットする
+# assets,meta,css をセットする
 
-7. `assets/styles/global.css` を登録する
+8. `assets/styles/global.scss` を登録する
 
 nuxt.config.ts
 
 ```ts
 export default defineNuxtConfig({
-  css: ['~/assets/styles/global.css']
-})
+  css: ["~/assets/styles/global.scss"],
+});
 ```
 
 <br>
 
 ### ポイント
+
 - `layouts/default.vue` がデフォルトで全てのページに適用される
   - 別途指定する場合は `definePageMeta` で指定する
-- グローバルcssは `nuxt.config.ts` で登録する
-  - layoutsでscoped styleを使っている場合そのレイアウト以外では適用されないため
+- グローバル css は `nuxt.config.ts` で登録する
+  - layouts で scoped style を使っている場合そのレイアウト以外では適用されないため
 
 <style>
 h1 {
@@ -478,289 +527,658 @@ h1 {
 
 ---
 
-# Code
+# assets,meta,css をセットする
 
-Use code snippets and get the highlighting directly![^1]
+9. `assets/styles/utils.scss` を作る
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
+```scss
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
 }
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.colorInherit {
+  color: inherit;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
 }
 ```
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
 <style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 </style>
 
 ---
 
-# Components
+# assets,meta,css をセットする
 
-<div grid="~ cols-2 gap-4">
-<div>
+10. `layouts/default.vue` を編集する
 
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
+```vue
 <script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
+const name = "Ushironoko";
+const siteTitle = "Learn how to build a personal website using Nuxt3";
 </script>
 
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+<template>
+  <div class="container">
+    <Head>
+      <Title>{{ siteTitle }}</Title>
+      <Link rel="icon" href="/images/profile.jpeg" />
+      <Meta
+        name="description"
+        content="Learn how to build a personal website using Next.js"
+      />
+      <Meta
+        property="og:image"
+        :content="`https://og-image.vercel.app/${encodeURI(
+          siteTitle
+        )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`"
+      />
+      <Meta name="og:title" :content="siteTitle" />
+      <Meta name="twitter:card" content="summary_large_image" />
+    </Head>
+    <header class="header">
+      <NuxtLink href="/">
+        <img
+          priority
+          src="/images/profile.jpeg"
+          class="borderCircle"
+          height="144"
+          width="144"
+          alt=""
+        />
+      </NuxtLink>
+      <h2 class="heading2Xl">
+        <NuxtLink class="colorInherit" href="/">{{ name }}</NuxtLink>
+      </h2>
+    </header>
+    <main><slot /></main>
+    <div class="backToHome">
+      <NuxtLink href="/">← Back to home</NuxtLink>
+    </div>
+  </div>
+</template>
 
-[Learn More](https://sli.dev/guide/animations.html#motion)
+<style lang="scss" scoped>
+@use "~/assets/styles/utils.scss";
 
-</div>
+.container {
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backToHome {
+  margin: 3rem 0 0;
+}
+</style>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 
-# LaTeX
+# assets,meta,css をセットする
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+11. `layouts/home.vue` を作る
+
+```vue
+<script setup lang="ts">
+const name = "Ushironoko";
+const siteTitle = "Learn how to build a personal website using Nuxt3";
+</script>
+
+<template>
+  <div class="container">
+    <Head>
+      <Title>{{ siteTitle }}</Title>
+      <Link rel="icon" href="/images/profile.jpeg" />
+      <Meta
+        name="description"
+        content="Learn how to build a personal website using Next.js"
+      />
+      <Meta
+        property="og:image"
+        :content="`https://og-image.vercel.app/${encodeURI(
+          siteTitle
+        )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`"
+      />
+      <Meta name="og:title" :content="siteTitle" />
+      <Meta name="twitter:card" content="summary_large_image" />
+    </Head>
+    <header class="header">
+      <img
+        priority
+        src="/images/profile.jpeg"
+        class="borderCircle"
+        height="144"
+        width="144"
+        alt=""
+      />
+      <h1 class="heading2Xl">{{ name }}</h1>
+    </header>
+    <main><slot /></main>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+@use "~/assets/styles/utils.scss";
+
+.container {
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# assets,meta,css をセットする
+
+10. `layouts/default.vue` を編集する
+11. `layouts/home.vue` を作る
 
 <br>
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+### ポイント
 
-Block
-$$
-\begin{array}{c}
+- 型付けしたい場合 https://github.com/Tahul/pinceau などの CSS-in-TS ライブラリを検討
 
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+---
 
-\nabla \cdot \vec{\mathbf{B}} & = 0
+# assets,meta,css をセットする
 
-\end{array}
-$$
+12. `pages/index.vue` を編集する
+
+```vue
+<script setup lang="ts">
+definePageMeta({
+  layout: "home",
+});
+</script>
+
+<template>
+  <section class="headingMd">
+    <p>こんにちは！</p>
+    <p>
+      (This is a sample website - you’ll be building a site like this on
+      <a href="https://nuxt.com">Nuxt3</a>.)
+    </p>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+@use "~/assets/styles/utils.scss";
+</style>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+- useFetch によるユニバーサルな fetch
+- SSG モードでプリレンダリング
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+1. マークダウンファイルを用意する
+
+posts/pre-rendering.md
+
+```md
+---
+title: "Crawl-based Pre-rendering"
+publishedAt: "2022-11-16"
+---
+
+Use the `nuxi generate` command to build your application.
+For every page, Nuxt uses a crawler to generate a corresponding HTML and payload files.
+The built files will be generated in the `.output/public` directory.
+```
+
+posts/edge-rendering.md
+
+```md
+---
+title: "Rendering on CDN Edge Workers"
+publishedAt: "2022-11-16"
+---
+
+Traditionally, server-side and universal rendering was only possible using Node.js. Nuxt 3 takes it to another level by directly rendering code in CDN edge workers, reducing latency and costs.
+Nitro is the new server engine that powers Nuxt 3. It offers cross-platform support for Node.js, Deno, Workers, and more. Nitro's design is platform-agnostic and allows rendering a Nuxt application at the edge, closer to your users, allowing replication and further optimizations.
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+2. パーサーライブラリをインストールする
+3. API を作る
+
+```shell
+yarn add -D gray-matter remark remark-html
+```
+
+server/api/posts/sortedpostsData.ts
+
+```ts
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const postsDirectory = path.join(process.cwd(), "posts");
+
+export default defineEventHandler(() => {
+  console.info(import.meta.url);
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.flatMap((fileName) => {
+    try {
+      const id = fileName.replace(/\.md$/, "");
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+      const matterResult = matter(fileContents);
+
+      return {
+        id,
+        ...matterResult.data,
+      } as {
+        id: string;
+        title: string;
+        description: string;
+        publishedAt: string;
+      };
+    } catch (e) {
+      console.error(e);
+      return [];
+    }
+  });
+
+  return allPostsData.sort(({ publishedAt: a }, { publishedAt: b }) => {
+    if (a < b) {
+      return 1;
+    } else if (a > b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+});
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+2. パーサーライブラリをインストールする
+3. API を作る
+
+server/api/posts/postsData.ts
+
+```ts
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
+
+const postsDirectory = path.join(process.cwd(), "posts");
+
+export default defineEventHandler(async (event) => {
+  const query = getQuery(event);
+  const fullPath = path.join(postsDirectory, `${query.id}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  const matterResult = matter(fileContents);
+
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
+  return {
+    id: query.id,
+    contentHtml,
+    ...matterResult.data,
+  };
+});
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+4. 動的ルートページを定義する
+
+pages/posts/[id].vue
+
+```vue
+<script setup lang="ts">
+const { params } = useRoute();
+
+const id = Array.isArray(params.id) ? params.id[0] : params.id;
+
+const { data } = useFetch(`/api/posts/postData?id=${encodeURIComponent(id)}`, {
+  key: id,
+});
+</script>
+
+<template>
+  <div class="whitespace-pre-wrap" v-html="data?.contentHtml"></div>
+</template>
+
+<style lang="scss">
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+</style>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+5. pages/index.vue を編集する
+
+pages/index.vue
+
+```vue
+<script setup lang="ts">
+definePageMeta({
+  layout: "home",
+});
+
+const { data: posts } = useFetch("/api/posts/sortedpostsData");
+</script>
+
+<template>
+  <div class="flex justify-center">
+    <main>
+      <section>
+        <div v-for="post in posts" :key="post.id">
+          <p>{{ post.publishedAt }}</p>
+          <NuxtLink :href="`/posts/${post.id}`">
+            <h2 class="headingLg">
+              <p>{{ post.title }}</p>
+            </h2>
+          </NuxtLink>
+        </div>
+      </section>
+    </main>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+@use "~/assets/styles/utils.scss";
+</style>
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+# data fetch & dynamic routes
+
+### ポイント
 
 <br>
 
-[Learn more](https://sli.dev/guide/syntax#latex)
+- API Routes(`server/api`) で api を定義
+- `useFetch`で定義した api をコール
+  - 一意になるキーを渡すことでキャッシュを回避
+- `[id].vue`の形で動的ルートを定義
+- `useRoute`でパラメータへアクセス
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 
-# Diagrams
+# Deploy on Cloudflare Pages
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+1. Cloudflare へログイン後、Pages から Git 連携
+2. ビルドコマンドと環境変数を設定
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+ビルドコマンド
 
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+```shell
+yarn generate
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+ビルド出力ディレクトリ
+
+```shell
+/.output/public
 ```
 
-```plantuml {scale: 0.7}
-@startuml
+env name
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
+```shell
+NODE_VERSION
 ```
 
-</div>
+env value
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+```shell
+v16.14.2
+```
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
-src: ./pages/multiple-entries.md
-hide: false
----
+
+# Deploy on Cloudflare Pages
+
+### ポイント
+
+- API Routes で Node.js API を用いたため SSG が必要
+  - Node.js API 互換のある環境なら SSR が可能(Deno Deploy 等)
+- `useFetch`で取得する値はビルド時に json 化され、本番では NuxtLink によって Preload される
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
-layout: center
-class: text-center
+
+# まとめ
+
+- Nuxt3 では様々な機能が auto import できる
+- 型の自動生成により、auto import された関数に型がつく
+- レイアウト定義は`layout/`で、個別に指定する場合ページで`definePageMeta`
+- css はローダーをインストールするだけでよしなに使えるようにしてくれる
+- SSG ではビルド時に`usefetch`をモックして json 化し、Preload する
+- 他にも `middleware`、`server middleware`、`plugins`、vitest ベースのテストランナー、多様なカスタムフックなど目玉機能が多数
+- 続きは 👉 https://nuxt.com/docs/getting-started/introduction で
+
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
 ---
 
-# Learn More
+<p class="text-[100px] absolute top-40 left-110">終</p>
+<a href="" class="text-[16px] absolute top-70 left-60">スライドの公開先👉</a>
+<a href="https://github.com/ushironoko/next-tutorial-on-nuxt-3" class="text-[16px] absolute top-80 left-60">完成品👉 https://github.com/ushironoko/next-tutorial-on-nuxt-3</a>
+<a href="https://sli.dev/" class="text-[16px] absolute top-90 left-60">powerd by👉 https://sli.dev/</a>
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<style>
+h1 {
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
