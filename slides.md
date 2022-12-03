@@ -1096,7 +1096,7 @@ yarn generate
 ビルド出力ディレクトリ
 
 ```shell
-/.output/public
+.output/public
 ```
 
 env name
