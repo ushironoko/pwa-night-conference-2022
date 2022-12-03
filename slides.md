@@ -290,7 +290,7 @@ h1 {
 
 # assets,meta,css をセットする
 
-1. `public` ディレクトリを作って `public/images/profile.jpg` を置く
+1. `public` ディレクトリを作って `public/images/profile.jpeg` を置く
 2. `components/ProfileImage.vue` を作る
 3. `pages/posts/first_post.vue` の title を修正する
 
@@ -298,7 +298,7 @@ components/ProfileImage.vue
 
 ```vue
 <template>
-  <img src="/images/profile.jpg" height="144" width="144" alt="ushironoko" />
+  <img src="/images/profile.jpeg" height="144" width="144" alt="ushironoko" />
 </template>
 ```
 
@@ -328,7 +328,7 @@ h1 {
 
 # assets,meta,css をセットする
 
-1. `public` ディレクトリを作って `public/images/profile.jpg` を置く
+1. `public` ディレクトリを作って `public/images/profile.jpeg` を置く
 2. `components/ProfileImage.vue` を作る
 3. `pages/posts/first_post.vue` の title を修正する
 
