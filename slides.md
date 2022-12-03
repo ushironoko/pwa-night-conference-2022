@@ -1147,7 +1147,7 @@ h1 {
 
 - Nuxt3 では様々な機能が auto import できる
 - 型の自動生成により、auto import された関数に型がつく
-- レイアウト定義は`layout/`で、個別に指定する場合ページで`definePageMeta`
+- レイアウト定義は`layouts/`で、個別に指定する場合ページで`definePageMeta`
 - css はローダーをインストールするだけでよしなに使えるようにしてくれる
 - SSG ではビルド時に`usefetch`をモックして json 化し、Preload する
 - 他にも `middleware`、`server middleware`、`plugins`、vitest ベースのテストランナー、多様なカスタムフックなど目玉機能が多数
