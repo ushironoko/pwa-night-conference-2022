@@ -1167,7 +1167,7 @@ h1 {
 ---
 
 <p class="text-[100px] absolute top-40 left-110">終</p>
-<a target="_blank" rel="noopener noreferrer" href="https://pwa-night-conference-2022.vercel.app/1" class="text-[16px] absolute top-70 left-60">スライドの公開先👉https://pwa-night-conference-2022.vercel.app/1</a>
+<a target="_blank" rel="noopener noreferrer" href="https://pwa-night-conference-2022.vercel.app/1" class="text-[16px] absolute top-70 left-60">スライドの公開先👉https://pwa-night-conference-2022-ushironoko.vercel.app/1</a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/ushironoko/next-tutorial-on-nuxt-3" class="text-[16px] absolute top-80 left-60">完成品👉 https://github.com/ushironoko/next-tutorial-on-nuxt-3</a>
 <a target="_blank" rel="noopener noreferrer" href="https://sli.dev/" class="text-[16px] absolute top-90 left-60">powerd by👉 https://sli.dev/</a>
 
