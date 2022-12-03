@@ -926,7 +926,7 @@ h1 {
 2. パーサーライブラリをインストールする
 3. API を作る
 
-`server/api/posts/postsData.ts`
+`server/api/posts/postData.ts`
 
 ```ts
 import fs from "fs";
