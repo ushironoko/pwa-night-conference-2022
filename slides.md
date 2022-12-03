@@ -1084,7 +1084,7 @@ h1 {
 
 # Deploy on Cloudflare Pages
 
-1. Cloudflare へログイン後、Pages から Git 連携
+1. Cloudflare へログイン後、Pages から GitHub 連携
 2. ビルドコマンドと環境変数を設定
 
 ビルドコマンド
