@@ -818,7 +818,7 @@ h1 {
 
 1. マークダウンファイルを用意する
 
-posts/pre-rendering.md
+`posts/pre-rendering.md`
 
 ```md
 ---
@@ -831,7 +831,7 @@ For every page, Nuxt uses a crawler to generate a corresponding HTML and payload
 The built files will be generated in the `.output/public` directory.
 ```
 
-posts/edge-rendering.md
+`posts/edge-rendering.md`
 
 ```md
 ---
@@ -864,7 +864,7 @@ h1 {
 yarn add -D gray-matter remark remark-html
 ```
 
-server/api/posts/sortedpostsData.ts
+`server/api/posts/sortedpostsData.ts`
 
 ```ts
 import fs from "fs";
@@ -927,7 +927,7 @@ h1 {
 2. パーサーライブラリをインストールする
 3. API を作る
 
-server/api/posts/postsData.ts
+`server/api/posts/postsData.ts`
 
 ```ts
 import fs from "fs";
@@ -974,7 +974,7 @@ h1 {
 
 4. 動的ルートページを定義する
 
-pages/posts/[id].vue
+`pages/posts/[id].vue`
 
 ```vue
 <script setup lang="ts">
