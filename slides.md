@@ -874,7 +874,6 @@ import matter from "gray-matter";
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export default defineEventHandler(() => {
-  console.info(import.meta.url);
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.flatMap((fileName) => {
     try {
