@@ -272,7 +272,7 @@ pages/index.vue
 
 ```vue
 <template>
-  <h1>Read <NuxtLink href="/posts/first-post">this page!</NuxtLink></h1>
+  <h1>Read <NuxtLink href="/posts/first_post">this page!</NuxtLink></h1>
 </template>
 ```
 
